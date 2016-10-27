@@ -1,0 +1,203 @@
+body
+  margin 0
+  padding 0
+  width 100vw
+  height 100vh
+  overflow hidden
+  font 13px Arial
+
+form
+  width 100%
+  display flex
+
+.register
+  top 0
+  left 0
+  width 100vw
+  height 100vh
+  z-index 1000
+  position absolute
+  align-items center
+  justify-content center
+  background-color rgba(#fff, 0.7)
+  
+  &:not([hidden])
+    display flex
+  
+  &__content
+    padding 30px
+    border-radius 2px
+    background-color #292929
+    
+  form
+    width 200px
+    display block
+
+  input
+    margin 0
+    width 200px
+    height 40px
+    border none
+    outline none
+    font-size 16px
+    padding 0 10px
+    border-radius 2px
+    box-sizing border-box
+    
+  button
+    padding 0
+    color #fff
+    width 100%
+    height 40px
+    border none
+    font-size 16px
+    margin 30px 0 0
+    border-radius 2px
+    background-color #1D7DF8
+    
+.chat
+  width 100%
+  height 100%
+  
+  &__content
+    width 100%
+    display flex
+    align-items stretch
+    height calc(100% - 50px)
+    
+.sidebar
+  width 250px
+  height 100%
+  color #efefef
+  background-color #292929
+  
+  h3
+    margin 0
+    padding 20px
+    border-bottom 1px solid rgba(#fff, 0.2)
+    
+  ul
+    margin 0
+    padding 0
+    list-style-type none
+    
+  ul li
+    height 40px
+    padding 0 20px
+    line-height 40px
+    
+  ul li + li
+    border-top 1px solid rgba(#fff, 0.2)
+    
+  button
+    color #fff
+    border none
+    height 20px
+    outline none
+    font-size 12px
+    padding 0 10px
+    margin-left 10px
+    border-radius 2px
+    display inline-block
+    background-color #C30000
+
+.messages
+  height 100%
+  display flex
+  flex-wrap wrap
+  align-items flex-end
+  width calc(100% - 250px)
+  
+  &__list
+    margin 0
+    width 100%
+    padding 20px
+    overflow auto
+    max-height 100%
+    box-sizing border-box
+    
+.typing-message
+  order: 99;
+  width 100%
+  color: #555;
+  height: 30px;
+  height: 30px;
+  display: block;
+  margin: 0 20px;
+  font-size: 11px;
+  overflow: hidden;
+  line-height: 48px;
+  transition height 80ms ease
+  
+  &[hidden]
+    height 0
+    
+.message
+  width 100%
+  display flex
+  
+  &_incoming
+    text-align right
+    justify-content flex-end
+    
+  &_outgoing
+    justify-content flex-start
+    
+  &_system
+    text-align center
+    justify-content center
+    
+  &__title
+    opacity 0.8
+    font-size 11px
+    padding-bottom 7px
+    
+  &__body
+    width auto
+    padding 10px
+    max-width 60%
+    min-width 140px
+    border-radius 3px
+    background-color #DFDFE5
+    
+  &_outgoing &__body
+    color #fff
+    background-color #1D7DF8
+    
+  &_system &__body
+    font-size 11px
+    padding 3px 20px
+    border-radius 100px
+    color rgba(#000, 0.6)
+    background-color rgba(#000, 0.05)
+
+  & + &
+    margin-top 30px
+
+.input
+  height 50px
+  display flex
+  padding 0 20px
+  background-color #efefef
+  
+  input
+    height 40px
+    border none
+    margin 5px 0
+    outline none
+    padding 0 10px
+    font-size 16px
+    border-radius 2px
+    box-sizing border-box
+    width calc(100% - 120px)
+    
+  button
+    padding 0
+    color #fff
+    width 100px
+    height 40px
+    border none
+    font-size 16px
+    border-radius 2px
+    margin 5px 0 5px 20px
+    background-color #1D7DF8

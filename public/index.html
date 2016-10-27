@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat app</title>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  
+  <div class="register" hidden>
+    <div class="register__content">
+      <form class="register__form">
+        <input type="text" name="name" placeholder="Type your name" required>
+        <br>
+        <button type="submit">Begin chat</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="chat">
+    <div class="chat__content">
+      <div class="messages">
+        <ul class="messages__list">
+          <div class="typing-message" hidden></div>
+        </ul>
+      </div>
+      <div class="sidebar">
+        <h3>Aactive connections</h3>
+        <ul class="users"></ul>
+      </div>
+    </div>
+
+    <div class="input">
+      <form class="new-message">
+        <input class="new-message__input" type="text">
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="/assets/index.js"></script>
+</body>
+</html>
